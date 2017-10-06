@@ -58,4 +58,18 @@
   <ItemGroup>
     <Folder Include="Properties" />
   </ItemGroup>
+  <ItemGroup>
+    <Build Include="Category.sql" />
+    <Build Include="Equipment.sql" />
+    <Build Include="Loadout.sql" />
+    <Build Include="LoadoutItems.sql" />
+    <Build Include="Ninja.sql" />
+    <Build Include="PurchasedItems.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="LeagueOfNinjasDatabase.sqlproj.user" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Script.PostDeployment1.sql" />
+  </ItemGroup>
 </Project>

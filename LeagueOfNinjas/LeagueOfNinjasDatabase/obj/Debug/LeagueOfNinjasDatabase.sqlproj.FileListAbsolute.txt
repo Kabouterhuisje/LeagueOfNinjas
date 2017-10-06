@@ -1,0 +1,9 @@
+C:\Users\dtijb\Desktop\PROG5_Eindopdracht\LeagueOfNinjas\LeagueOfNinjas\LeagueOfNinjasDatabase\bin\Debug\LeagueOfNinjasDatabase.dacpac
+C:\Users\dtijb\Desktop\PROG5_Eindopdracht\LeagueOfNinjas\LeagueOfNinjas\LeagueOfNinjasDatabase\bin\Debug\LeagueOfNinjasDatabase.dll
+C:\Users\dtijb\Desktop\PROG5_Eindopdracht\LeagueOfNinjas\LeagueOfNinjas\LeagueOfNinjasDatabase\bin\Debug\LeagueOfNinjasDatabase.pdb
+C:\Users\dtijb\Desktop\PROG5_Eindopdracht\LeagueOfNinjas\LeagueOfNinjas\LeagueOfNinjasDatabase\obj\Debug\Model.xml
+C:\Users\dtijb\Desktop\PROG5_Eindopdracht\LeagueOfNinjas\LeagueOfNinjas\LeagueOfNinjasDatabase\obj\Debug\refactor.xml
+C:\Users\dtijb\Desktop\PROG5_Eindopdracht\LeagueOfNinjas\LeagueOfNinjas\LeagueOfNinjasDatabase\obj\Debug\postdeploy.sql
+C:\Users\dtijb\Desktop\PROG5_Eindopdracht\LeagueOfNinjas\LeagueOfNinjas\LeagueOfNinjasDatabase\obj\Debug\predeploy.sql
+C:\Users\dtijb\Desktop\PROG5_Eindopdracht\LeagueOfNinjas\LeagueOfNinjas\LeagueOfNinjasDatabase\obj\Debug\LeagueOfNinjasDatabase.dll
+C:\Users\dtijb\Desktop\PROG5_Eindopdracht\LeagueOfNinjas\LeagueOfNinjas\LeagueOfNinjasDatabase\obj\Debug\LeagueOfNinjasDatabase.pdb
