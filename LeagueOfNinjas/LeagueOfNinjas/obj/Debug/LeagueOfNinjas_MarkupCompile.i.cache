@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\dtijb\Desktop\PROG5_Eindopdracht\LeagueOfNinjas\LeagueOfNinjas\LeagueOfNinjas\App.xaml
-11151548125
+12-1669948170
 
-9-727916240
-13738642453
-MainWindow.xaml;
+241722606094
+69-483901617
+View\Equipment\EquipmentCreateView.xaml;View\Equipment\EquipmentEditView.xaml;View\Equipment\EquipmentListView.xaml;View\Loadout\LoadoutCreateView.xaml;View\Loadout\LoadoutEditView.xaml;View\Loadout\LoadoutListView.xaml;View\MainView.xaml;View\Ninjas\NinjaCreateView.xaml;View\Ninjas\NinjaEditView.xaml;View\Ninjas\NinjaListView.xaml;View\NinjaVisualView.xaml;View\ShopView.xaml;
 
-False
+True
 

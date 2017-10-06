@@ -1,0 +1,123 @@
+<UserControl x:Class="PROG5_LeagueOfNinjas.ShopView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PROG5_LeagueOfNinjas"
+        mc:Ignorable="d"
+        DataContext="{Binding Source={StaticResource Locator}, Path=ShopViewModel}">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.2*" />
+            <ColumnDefinition Width="0.4*" />
+            <ColumnDefinition Width="0.4*" />
+        </Grid.ColumnDefinitions>
+        <ListBox Grid.Column="0" ItemsSource="{Binding Categories}" SelectedItem="{Binding SelectedCategory}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Type}" />
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <ListBox Grid.Column="1" ItemsSource="{Binding Equipment, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding SelectedEquipment}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid Background="Transparent">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.2*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <Image Grid.Column="0" Grid.RowSpan="6" Margin="5" Source="{Binding Image}" Width="100" Height="100" />
+                        <TextBlock Grid.Column="1" Grid.Row="0" Margin="5" Text="{Binding Name}" FontWeight="Heavy" />
+                        <TextBlock Grid.Column="1" Grid.Row="1" Margin="5,0">
+                            <TextBlock.Text>
+                                <MultiBinding StringFormat="{}Value: {0}G">
+                                    <Binding Path="Value" />
+                                </MultiBinding>
+                            </TextBlock.Text>
+                        </TextBlock>
+                        <TextBlock Grid.Column="1" Grid.Row="2" Margin="5,0">
+                            <TextBlock.Text>
+                                <MultiBinding StringFormat="{}Strength: {0}">
+                                    <Binding Path="Strength" />
+                                </MultiBinding>
+                            </TextBlock.Text>
+                        </TextBlock>
+                        <TextBlock Grid.Column="1" Grid.Row="3" Margin="5,0">
+                            <TextBlock.Text>
+                                <MultiBinding StringFormat="{}Intelligence: {0}">
+                                    <Binding Path="Intelligence" />
+                                </MultiBinding>
+                            </TextBlock.Text>
+                        </TextBlock>
+                        <TextBlock Grid.Column="1" Grid.Row="4" Margin="5,0">
+                            <TextBlock.Text>
+                                <MultiBinding StringFormat="{}Agility: {0}">
+                                    <Binding Path="Agility" />
+                                </MultiBinding>
+                            </TextBlock.Text>
+                        </TextBlock>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Grid Grid.Column="2">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.35*" />
+                    <RowDefinition Height="0.2*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Image Grid.Row="0" Source="{Binding SelectedEquipmentImage}" />
+
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.7*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Column="0" Grid.Row="0" Content="Name" Background="#FFD68B8B"  />
+                    <Label Grid.Column="1" Grid.Row="0" Content="{Binding SelectedEquipment.Name}" Background="#FFD68B8B" />
+
+                    <Label Grid.Column="0" Grid.Row="1" Content="Strength" Background="#FFD68B8B" />
+                    <Label Grid.Column="1" Grid.Row="1" Content="{Binding SelectedEquipment.Strength}" Background="#FFD68B8B"  />
+
+                    <Label Grid.Column="0" Grid.Row="2" Content="Agility" Background="#FFD68B8B"  />
+                    <Label Grid.Column="1" Grid.Row="2" Content="{Binding SelectedEquipment.Agility}" Background="#FFD68B8B"/>
+
+                    <Label Grid.Column="0" Grid.Row="3" Content="Intelligence" Background="#FFD68B8B"  />
+                    <Label Grid.Column="1" Grid.Row="3" Content="{Binding SelectedEquipment.Intelligence}" Background="#FFD68B8B"  />
+
+                    <Label Grid.Column="0" Grid.Row="4" Content="Price:" FontWeight="Heavy" Background="#FFD68B8B" />
+                    <Label Grid.Column="1" Grid.Row="5" Background="#FFD68B8B">
+                        <TextBlock FontWeight="Heavy">
+                            <TextBlock.Text>
+                                <MultiBinding StringFormat="{}{0}G">
+                                    <Binding Path="SelectedEquipment.Value" />
+                                </MultiBinding>
+                            </TextBlock.Text>
+                        </TextBlock>
+                    </Label>
+                </Grid>
+
+                <Button Grid.Row="2" Content="Buy" Command="{Binding BuyCommand}" />
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>

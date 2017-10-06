@@ -1,0 +1,45 @@
+﻿<UserControl x:Class="PROG5_LeagueOfNinjas.View.Ninjas.NinjaListView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PROG5_LeagueOfNinjas.View.Ninjas"
+        mc:Ignorable="d"
+        DataContext="{Binding Source={StaticResource Locator}, Path=NinjaListViewModel}">
+    <Grid Background="black">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.5*" />
+            <ColumnDefinition Width="0.5*" />
+        </Grid.ColumnDefinitions>
+        <ListBox Grid.Column="0" SelectedItem="{Binding SelectedNinja}" ItemsSource="{Binding Ninjas}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Margin="5" Text="{Binding Name}" FontWeight="Heavy" />
+                        <TextBlock Margin="5,0">
+                            <TextBlock.Text>
+                                <MultiBinding StringFormat="{}Gold: {0}G">
+                                    <Binding Path="Gold" />
+                                </MultiBinding>
+                            </TextBlock.Text>
+                        </TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="25*"/>
+                <RowDefinition Height="32*"/>
+            </Grid.RowDefinitions>
+            <Button Grid.Row="0" Margin="20,5,19.6,4" Command="{Binding NinjaAddCommand}">Add Ninja</Button>
+            <Button Grid.Row="1" Margin="20,6,19.6,3" Command="{Binding NinjaEditCommand}" IsEnabled="{Binding IsNinjaSelected}">Edit Ninja</Button>
+            <Button Grid.Row="2" Margin="20,7,19.6,3" Command="{Binding NinjaDeleteCommand}" IsEnabled="{Binding IsNinjaSelected}">Delete Ninja</Button>
+            <Button Grid.Row="3" Margin="20,5" Command="{Binding openLoadOutCommand}" IsEnabled="{Binding IsNinjaSelected}">View Loadout</Button>
+            </Grid>
+    </Grid>
+</UserControl>
