@@ -1,0 +1,4 @@
+﻿CREATE TABLE [dbo].[Category]
+(
+	[Type] VARCHAR(45) NOT NULL PRIMARY KEY
+)
