@@ -1,0 +1,2 @@
+c:\users\dtijb\documents\visual studio 2015\Projects\LeagueOfNinjas\LeagueOfNinjas\bin\Debug\LeagueOfNinjas.exe.config
+C:\Users\dtijb\Desktop\PROG5_Eindopdracht\LeagueOfNinjas\LeagueOfNinjas\LeagueOfNinjas\bin\Debug\LeagueOfNinjas.exe.config
