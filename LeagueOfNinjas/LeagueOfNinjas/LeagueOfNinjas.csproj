@@ -199,6 +199,26 @@
   <ItemGroup>
     <Resource Include="Resources\Ninja.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\ChainLeggings.png" />
+    <Resource Include="Resources\ChainMail.png" />
+    <Resource Include="Resources\GloriousBalorPauldrons.png" />
+    <Resource Include="Resources\HeartOfIron.png" />
+    <Resource Include="Resources\HideBelt.png" />
+    <Resource Include="Resources\HidePants.png" />
+    <Resource Include="Resources\HomingPads.png" />
+    <Resource Include="Resources\LeoricsCrown.png" />
+    <Resource Include="Resources\LutBoots.png" />
+    <Resource Include="Resources\MysteryBelt.png" />
+    <Resource Include="Resources\MysteryBoots.png" />
+    <Resource Include="Resources\MysteryChestArmor.png" />
+    <Resource Include="Resources\MysteryPants.png" />
+    <Resource Include="Resources\MysteryShoulders.png" />
+    <Resource Include="Resources\RiveraDancers.png" />
+    <Resource Include="Resources\SaffronWrap.png" />
+    <Resource Include="Resources\VeilOfSteel.png" />
+    <Resource Include="Resources\WarhelmOfKassar.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

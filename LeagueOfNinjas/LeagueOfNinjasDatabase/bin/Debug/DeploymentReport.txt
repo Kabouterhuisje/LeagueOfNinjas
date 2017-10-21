@@ -1,0 +1,26 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Create
+       [dbo].[Category] (Table)
+       [dbo].[Equipment] (Table)
+       [dbo].[Loadout] (Table)
+       [dbo].[LoadoutItems] (Table)
+       [dbo].[Ninja] (Table)
+       [dbo].[PurchasedItems] (Table)
+       [dbo].[FK_Equipment_Category] (Foreign Key)
+       [dbo].[FK_Loadout_loadout] (Foreign Key)
+       [dbo].[FK_LoadoutItems_Loadout] (Foreign Key)
+       [dbo].[FK_LoadoutItems_Equipment] (Foreign Key)
+       [dbo].[FK_PurchasedItems_loadout] (Foreign Key)
+       [dbo].[FK_PurchasedItems_Equipment] (Foreign Key)
+
+** Supporting actions

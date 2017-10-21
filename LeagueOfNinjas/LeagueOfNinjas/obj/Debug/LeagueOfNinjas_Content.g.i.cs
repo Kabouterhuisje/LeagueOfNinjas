@@ -8,6 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/shen.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("edm.context.tt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("edm.tt")]
 
 
