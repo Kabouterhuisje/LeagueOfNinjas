@@ -1,9 +1,9 @@
-﻿<UserControl x:Class="PROG5_LeagueOfNinjas.View.Ninjas.NinjaListView"
+﻿<UserControl x:Class="LeagueOfNinjas.View.Ninjas.NinjaListView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:PROG5_LeagueOfNinjas.View.Ninjas"
+        xmlns:local="clr-namespace:LeagueOfNinjas.View.Ninjas"
         mc:Ignorable="d"
         DataContext="{Binding Source={StaticResource Locator}, Path=NinjaListViewModel}">
     <Grid Background="black">

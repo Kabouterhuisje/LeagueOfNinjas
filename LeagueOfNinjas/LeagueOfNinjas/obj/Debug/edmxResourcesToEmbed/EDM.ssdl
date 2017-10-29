@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LONModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="Type" />
+    </Key>
+    <Property Name="Type" Type="varchar" MaxLength="45" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Equipment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Type" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="Value" Type="int" Nullable="false" />
+    <Property Name="Strength" Type="int" />
+    <Property Name="Intelligence" Type="int" />
+    <Property Name="Agility" Type="int" />
+    <Property Name="Name" Type="varchar(max)" Nullable="false" />
+    <Property Name="Image" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Loadout">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar(max)" Nullable="false" />
+    <Property Name="Ninja" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LoadoutItems">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Loadout" Type="int" Nullable="false" />
+    <Property Name="Equipment" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Ninja">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Gold" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PurchasedItems">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ninja" Type="int" Nullable="false" />
+    <Property Name="Equipment" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Equipment_Category">
+    <End Role="Category" Type="Self.Category" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Equipment" Type="Self.Equipment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="Type" />
+      </Principal>
+      <Dependent Role="Equipment">
+        <PropertyRef Name="Type" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Loadout_loadout">
+    <End Role="Ninja" Type="Self.Ninja" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Loadout" Type="Self.Loadout" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ninja">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Loadout">
+        <PropertyRef Name="Ninja" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LoadoutItems_Equipment">
+    <End Role="Equipment" Type="Self.Equipment" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="LoadoutItems" Type="Self.LoadoutItems" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Equipment">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="LoadoutItems">
+        <PropertyRef Name="Equipment" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LoadoutItems_Loadout">
+    <End Role="Loadout" Type="Self.Loadout" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="LoadoutItems" Type="Self.LoadoutItems" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Loadout">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="LoadoutItems">
+        <PropertyRef Name="Loadout" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PurchasedItems_Equipment">
+    <End Role="Equipment" Type="Self.Equipment" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="PurchasedItems" Type="Self.PurchasedItems" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Equipment">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PurchasedItems">
+        <PropertyRef Name="Equipment" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PurchasedItems_loadout">
+    <End Role="Ninja" Type="Self.Ninja" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="PurchasedItems" Type="Self.PurchasedItems" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ninja">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PurchasedItems">
+        <PropertyRef Name="Ninja" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="LONModelStoreContainer">
+    <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Equipment" EntityType="Self.Equipment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Loadout" EntityType="Self.Loadout" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoadoutItems" EntityType="Self.LoadoutItems" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ninja" EntityType="Self.Ninja" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PurchasedItems" EntityType="Self.PurchasedItems" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Equipment_Category" Association="Self.FK_Equipment_Category">
+      <End Role="Category" EntitySet="Category" />
+      <End Role="Equipment" EntitySet="Equipment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Loadout_loadout" Association="Self.FK_Loadout_loadout">
+      <End Role="Ninja" EntitySet="Ninja" />
+      <End Role="Loadout" EntitySet="Loadout" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LoadoutItems_Equipment" Association="Self.FK_LoadoutItems_Equipment">
+      <End Role="Equipment" EntitySet="Equipment" />
+      <End Role="LoadoutItems" EntitySet="LoadoutItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LoadoutItems_Loadout" Association="Self.FK_LoadoutItems_Loadout">
+      <End Role="Loadout" EntitySet="Loadout" />
+      <End Role="LoadoutItems" EntitySet="LoadoutItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PurchasedItems_Equipment" Association="Self.FK_PurchasedItems_Equipment">
+      <End Role="Equipment" EntitySet="Equipment" />
+      <End Role="PurchasedItems" EntitySet="PurchasedItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PurchasedItems_loadout" Association="Self.FK_PurchasedItems_loadout">
+      <End Role="Ninja" EntitySet="Ninja" />
+      <End Role="PurchasedItems" EntitySet="PurchasedItems" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

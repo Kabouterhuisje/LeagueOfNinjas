@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace PROG5_LeagueOfNinjas.View.Equipment
+namespace LeagueOfNinjas.View.Equipment
 {
     /// <summary>
     /// Interaction logic for EquipmentEditView.xaml

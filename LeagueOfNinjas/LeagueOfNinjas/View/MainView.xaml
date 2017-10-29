@@ -1,9 +1,9 @@
-﻿<Window x:Class="PROG5_LeagueOfNinjas.View.MainView"
+﻿<Window x:Class="LeagueOfNinjas.View.MainView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:PROG5_LeagueOfNinjas.View"
+        xmlns:local="clr-namespace:LeagueOfNinjas.View"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         DataContext="{Binding Source={StaticResource Locator}, Path=MainViewModel}"
@@ -23,7 +23,7 @@
                 <StackPanel Grid.Row="0" VerticalAlignment="Stretch">
                     <Button Content="Ninja's" Command="{Binding OpenNinjasCommand}" />
                     <Button Content="Shop" Command="{Binding OpenShopCommand}" />
-                    <Button Content="Equipment (admin)" Command="{Binding OpenEquipmentCommand}"  />
+                    <Button Content="Equipment" Command="{Binding OpenEquipmentCommand}"  />
                     <Button Content="NinjaVisualView" Command="{Binding OpenVisualNinjaCommand}"  >
                         <Button.Style>
                             <Style TargetType="Button">

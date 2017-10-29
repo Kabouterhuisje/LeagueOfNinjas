@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("edm.context.tt")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("edm.tt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("data/edm.context.tt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("data/edm.tt")]
 
 

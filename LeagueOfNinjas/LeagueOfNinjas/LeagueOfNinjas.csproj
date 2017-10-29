@@ -86,42 +86,54 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Category.cs">
+    <Compile Include="Data\Category.cs">
       <DependentUpon>EDM.tt</DependentUpon>
     </Compile>
-    <Compile Include="EDM.Context.cs">
+    <Compile Include="Data\EDM.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>EDM.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="EDM.cs">
+    <Compile Include="Data\EDM.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>EDM.tt</DependentUpon>
     </Compile>
-    <Compile Include="EDM.Designer.cs">
+    <Compile Include="Data\EDM.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>EDM.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Equipment.cs">
+    <Compile Include="Data\Equipment.cs">
       <DependentUpon>EDM.tt</DependentUpon>
     </Compile>
-    <Compile Include="Loadout.cs">
+    <Compile Include="Data\Loadout.cs">
       <DependentUpon>EDM.tt</DependentUpon>
     </Compile>
-    <Compile Include="LoadoutItems.cs">
+    <Compile Include="Data\LoadoutItems.cs">
       <DependentUpon>EDM.tt</DependentUpon>
     </Compile>
-    <Compile Include="Ninja.cs">
+    <Compile Include="Data\Ninja.cs">
       <DependentUpon>EDM.tt</DependentUpon>
     </Compile>
-    <Compile Include="PurchasedItems.cs">
+    <Compile Include="Data\PurchasedItems.cs">
       <DependentUpon>EDM.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\ViewFactory.cs" />
     <Compile Include="Validation\IntLowerThan1ValidationRule.cs" />
     <Compile Include="Validation\StringNotNullAndNotEmptyValidationRule.cs" />
+    <Compile Include="ViewModel\Equipment\EquipmentCreateViewModel.cs" />
+    <Compile Include="ViewModel\Equipment\EquipmentEditViewModel.cs" />
+    <Compile Include="ViewModel\Equipment\EquipmentListViewModel.cs" />
+    <Compile Include="ViewModel\Loadout\LoadoutCreateViewModel.cs" />
+    <Compile Include="ViewModel\Loadout\LoadoutEditViewModel.cs" />
+    <Compile Include="ViewModel\Loadout\LoadoutListViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="ViewModel\Ninjas\NinjaCreateViewModel.cs" />
+    <Compile Include="ViewModel\Ninjas\NinjaEditViewModel.cs" />
+    <Compile Include="ViewModel\Ninjas\NinjaListViewModel.cs" />
+    <Compile Include="ViewModel\NinjaVisualViewModel.cs" />
+    <Compile Include="ViewModel\ShopViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
     <Compile Include="View\Equipment\EquipmentCreateView.xaml.cs">
       <DependentUpon>EquipmentCreateView.xaml</DependentUpon>
@@ -230,11 +242,11 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="EDM.edmx">
+    <EntityDeploy Include="Data\EDM.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>EDM.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="EDM.edmx.diagram">
+    <None Include="Data\EDM.edmx.diagram">
       <DependentUpon>EDM.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
@@ -271,12 +283,12 @@
     <Resource Include="Resources\WarhelmOfKassar.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="EDM.Context.tt">
+    <Content Include="Data\EDM.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>EDM.edmx</DependentUpon>
       <LastGenOutput>EDM.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="EDM.tt">
+    <Content Include="Data\EDM.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>EDM.edmx</DependentUpon>
       <LastGenOutput>EDM.cs</LastGenOutput>
@@ -285,6 +297,7 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

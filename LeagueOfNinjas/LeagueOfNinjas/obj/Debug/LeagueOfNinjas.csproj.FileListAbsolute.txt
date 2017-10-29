@@ -48,4 +48,10 @@ C:\Users\dtijb\Desktop\PROG5_Eindopdracht\LeagueOfNinjas\LeagueOfNinjas\LeagueOf
 C:\Users\dtijb\Desktop\PROG5_Eindopdracht\LeagueOfNinjas\LeagueOfNinjas\LeagueOfNinjas\obj\Debug\LeagueOfNinjas.csproj.GenerateResource.Cache
 C:\Users\dtijb\Desktop\PROG5_Eindopdracht\LeagueOfNinjas\LeagueOfNinjas\LeagueOfNinjas\obj\Debug\LeagueOfNinjas.exe
 C:\Users\dtijb\Desktop\PROG5_Eindopdracht\LeagueOfNinjas\LeagueOfNinjas\LeagueOfNinjas\obj\Debug\LeagueOfNinjas.pdb
-C:\Users\dtijb\Desktop\PROG5_Eindopdracht\LeagueOfNinjas\LeagueOfNinjas\LeagueOfNinjas\obj\Debug\LeagueOfNinjas.csprojResolveAssemblyReference.cache
+C:\Users\dtijb\Desktop\PROG5_EINDOPDRACHT\LeagueOfNinjas\LeagueOfNinjas\LeagueOfNinjas\bin\Debug\EntityFramework.dll
+C:\Users\dtijb\Desktop\PROG5_EINDOPDRACHT\LeagueOfNinjas\LeagueOfNinjas\LeagueOfNinjas\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\dtijb\Desktop\PROG5_EINDOPDRACHT\LeagueOfNinjas\LeagueOfNinjas\LeagueOfNinjas\bin\Debug\EntityFramework.xml
+C:\Users\dtijb\Desktop\PROG5_EINDOPDRACHT\LeagueOfNinjas\LeagueOfNinjas\LeagueOfNinjas\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\dtijb\Desktop\PROG5_EINDOPDRACHT\LeagueOfNinjas\LeagueOfNinjas\LeagueOfNinjas\obj\Debug\LeagueOfNinjas_Content.g.cs
+C:\Users\dtijb\Desktop\PROG5_EINDOPDRACHT\LeagueOfNinjas\LeagueOfNinjas\LeagueOfNinjas\obj\Debug\App.baml
+C:\Users\dtijb\Desktop\PROG5_EINDOPDRACHT\LeagueOfNinjas\LeagueOfNinjas\LeagueOfNinjas\obj\Debug\LeagueOfNinjas.csprojResolveAssemblyReference.cache

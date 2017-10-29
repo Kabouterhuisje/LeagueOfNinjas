@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace PROG5_LeagueOfNinjas.View.Loadout
+namespace LeagueOfNinjas.View.Loadout
 {
     /// <summary>
     /// Interaction logic for NinjaCreateView.xaml
